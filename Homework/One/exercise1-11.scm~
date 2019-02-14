@@ -8,7 +8,7 @@
 ;; Recursive
 (define (recursive-proc n)
   (cond ((< n 3) n)
-        (else (+ (recursive-proc (- n 1)) (* 2 (recursive-proc (- n 2)))
+        (else (+ ( + (recursive-proc (- n 1)) (* 2 (recursive-proc (- n 2))))
                  (* 3 (recursive-proc(- n 3)))))))
 
 ;; Iterative (INCOMPLETE) Office-Hours?
