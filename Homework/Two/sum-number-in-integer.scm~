@@ -1,0 +1,2 @@
+; 2.  Write iterative and recursive scheme functions to return the sum of the digits within
+; a non-negative integer.  For example, (sum-of-digits 345) is 12.

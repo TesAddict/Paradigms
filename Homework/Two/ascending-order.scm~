@@ -1,0 +1,3 @@
+; 3.  Write iterative and recursive scheme programs to test whether the digits in a non-negative
+; integer are in increasing order.  For example, the digits of 12348 are in increasing order, while
+; those of 12343 are not.
