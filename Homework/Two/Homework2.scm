@@ -20,10 +20,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-; 1.  Abelson and Sussman, Problems 1.11 and 1.12
+; 1.  Abelson and Sussman, Problems 1.11 and 1.12 (Completed Minus Proofs)
 
 ; 2.  Write iterative and recursive scheme functions to return the sum of the digits within
-; a non-negative integer.  For example, (sum-of-digits 345) is 12.
+; a non-negative integer.  For example, (sum-of-digits 345) is 12. (Completed Minus Iterative Proof)
 
 ; 3.  Write iterative and recursive scheme programs to test whether the digits in a non-negative
 ; integer are in increasing order.  For example, the digits of 12348 are in increasing order, while
