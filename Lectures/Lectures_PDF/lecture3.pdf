@@ -1,0 +1,986 @@
+%!PS-Adobe-3.0
+%%Title: lecture3.scm
+%%For: methos
+%%Creator: VIM - Vi IMproved 8.0 (2016 Sep 12)
+%%CreationDate: Tue Mar  5 22:12:08 2019
+%%DocumentData: Clean8Bit
+%%Orientation: Portrait
+%%Pages: (atend)
+%%PageOrder: Ascend
+%%BoundingBox: 61 42 577 752
+%%DocumentMedia: letter 612 792 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%DocumentSuppliedResources: procset VIM-Prolog 1.4 1
+%%+ encoding VIM-latin1 1.0 0
+%%Requirements: duplex collate color
+%%EndComments
+%%BeginDefaults
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%PageMedia: letter
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset VIM-Prolog
+%%BeginDocument: /usr/share/vim/vim80/print/prolog.ps
+%!PS-Adobe-3.0 Resource-ProcSet
+%%Title: VIM-Prolog
+%%Version: 1.4 1
+%%EndComments
+% Editing of this file is NOT RECOMMENDED.  You run a very good risk of causing
+% all PostScript printing from VIM failing if you do.  PostScript is not called
+% a write-only language for nothing!
+/packedarray where not{userdict begin/setpacking/pop load def/currentpacking
+false def end}{pop}ifelse/CP currentpacking def true setpacking
+/bd{bind def}bind def/ld{load def}bd/ed{exch def}bd/d/def ld
+/db{dict begin}bd/cde{currentdict end}bd
+/T true d/F false d
+/SO null d/sv{/SO save d}bd/re{SO restore}bd
+/L2 systemdict/languagelevel 2 copy known{get exec}{pop pop 1}ifelse 2 ge d
+/m/moveto ld/s/show ld /ms{m s}bd /g/setgray ld/r/setrgbcolor ld/sp{showpage}bd
+/gs/gsave ld/gr/grestore ld/cp/currentpoint ld
+/ul{gs UW setlinewidth cp UO add 2 copy newpath m 3 1 roll add exch lineto
+stroke gr}bd
+/bg{gs r cp BO add 4 -2 roll rectfill gr}bd
+/sl{90 rotate 0 exch translate}bd
+L2{
+/sspd{mark exch{setpagedevice}stopped cleartomark}bd
+/nc{1 db/NumCopies ed cde sspd}bd
+/sps{3 db/Orientation ed[3 1 roll]/PageSize ed/ImagingBBox null d cde sspd}bd
+/dt{2 db/Tumble ed/Duplex ed cde sspd}bd
+/c{1 db/Collate ed cde sspd}bd
+}{
+/nc{/#copies ed}bd
+/sps{statusdict/setpage get exec}bd
+/dt{statusdict/settumble 2 copy known{get exec}{pop pop pop}ifelse
+statusdict/setduplexmode 2 copy known{get exec}{pop pop pop}ifelse}bd
+/c{pop}bd
+}ifelse
+/ffs{findfont exch scalefont d}bd/sf{setfont}bd
+/ref{1 db findfont dup maxlength dict/NFD ed{exch dup/FID ne{exch NFD 3 1 roll
+put}{pop pop}ifelse}forall/Encoding findresource dup length 256 eq{NFD/Encoding
+3 -1 roll put}{pop}ifelse NFD dup/FontType get 3 ne{/CharStrings}{/CharProcs}
+ifelse 2 copy known{2 copy get dup maxlength dict copy[/questiondown/space]{2
+copy known{2 copy get 2 index/.notdef 3 -1 roll put pop exit}if pop}forall put
+}{pop pop}ifelse dup NFD/FontName 3 -1 roll put NFD definefont pop end}bd
+CP setpacking
+(\004)cvn{}bd
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%BeginResource: encoding VIM-latin1
+%%BeginDocument: /usr/share/vim/vim80/print/latin1.ps
+%!PS-Adobe-3.0 Resource-Encoding
+%%Title: VIM-latin1
+%%Version: 1.0 0
+%%EndComments
+/VIM-latin1[
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/grave /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis]
+/Encoding defineresource pop
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%EndProlog
+%%BeginSetup
+612 792 0 sps
+1 nc
+T F dt
+T c
+%%IncludeResource: font Courier
+/_F0 /VIM-latin1 /Courier ref
+/F0 10 /_F0 ffs
+%%IncludeResource: font Courier-Bold
+/_F1 /VIM-latin1 /Courier-Bold ref
+/F1 10 /_F1 ffs
+%%IncludeResource: font Courier-Oblique
+/_F2 /VIM-latin1 /Courier-Oblique ref
+/F2 10 /_F2 ffs
+%%IncludeResource: font Courier-BoldOblique
+/_F3 /VIM-latin1 /Courier-BoldOblique ref
+/F3 10 /_F3 ffs
+/UO -1 d
+/UW 0.5 d
+/BO -2.5 d
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture3.scm                                                                    Page 1)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; Lecture 3 CSc 335)61.2 714.9 ms
+(; February 5 2019)61.2 704.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 664.9 ms
+(; Section 1.2 Procedures and the Processes they Generate)61.2 634.9 ms
+(; recursive and iterative processes are distinguished.)61.2 604.9 ms
+(; recursive processes are characterized by their building up a chain of)61.2 584.9 ms
+(; deferred operations.)61.2 574.9 ms
+(; in the process engendered by the fact procedure, for example, a chain)61.2 554.9 ms
+(; of deferred multiplications is created)61.2 544.9 ms
+0.753 0 0.753 r
+(\()61.2 524.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fact x)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 514.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( x )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 504.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fact )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(-)s
+0 g
+( x )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\)\)\)\)\))s
+0.753 0 0 r
+(; \(fact 6\))61.2 474.9 ms
+(; \(* 6 \(fact 5\)\))61.2 464.9 ms
+(; \(* 6 \(* 5 \(fact 4\)\)\))61.2 454.9 ms
+(; \(* 6 \(* 5 \(* 4 \(fact 3\)\)\)\))61.2 444.9 ms
+(; \(* 6 \(* 5 \(* 4 \(* 3 \(fact 2\)\)\)\)\))61.2 434.9 ms
+(; \(* 6 \(* 5 \(* 4 \(* 3 \(* 2 \(fact 1\)\)\)\)\)\))61.2 424.9 ms
+(; \(* 6 \(* 5 \(* 4 \(* 3 \(* 2 \(* 1 \(fact 0\)\)\)\)\)\)\))61.2 414.9 ms
+(; \(* 6 \(* 5 \(* 4 \(* 3 \(* 2 \(* 1 1\)\)\)\)\)\))61.2 404.9 ms
+(; \(* 6 \(* 5 \(* 4 \(* 3 \(* 2 1\)\)\)\)\))61.2 394.9 ms
+(; \(* 6 \(* 5 \(* 4 \(* 3 2\)\)\)\))61.2 384.9 ms
+(; \(* 6 \(* 5 \(* 4 6\)\)\))61.2 374.9 ms
+(; \(* 6 \(* 5 24\)\))61.2 364.9 ms
+(; \(* 6 120\))61.2 354.9 ms
+(; 720)61.2 344.9 ms
+(; as you might expect, one certifies the correctness of fact using)61.2 314.9 ms
+(; induction on the non-negative integer input, x)61.2 304.9 ms
+(; basis step: start with the smallest legal input, that is, x = 0)61.2 284.9 ms
+(;             and observe that \(fact 0\) = 1, which is correct.  )61.2 274.9 ms
+(; induction hypothesis:  assume \(fact k\) works correctly, that is, )61.2 254.9 ms
+(;             that the value returned by the call \(fact k\) is exactly)61.2 244.9 ms
+(;             the factorial of k \(written k!, as you know\))61.2 234.9 ms
+(; induction step:  we show, using the induction hypothesis, that \(fact \(+ k 1\)\))61.2 214.9 ms
+(;             works correctly.  According to the code, \(fact \(+ k 1\)\) returns)61.2 204.9 ms
+(;             \(* \(+ k 1\) \(fact k\)\).  If \(fact k\) = k!, as it must by the )61.2 194.9 ms
+(;             induction hypothesis, then multiplying it by \(+ k 1\) certainly)61.2 184.9 ms
+(;             returns the factorial of \(+ k 1\).)61.2 174.9 ms
+(; we would want to check in addition that the program terminates - that is, that it)61.2 134.9 ms
+(; does eventually return an answer.  we do this without using induction,)61.2 124.9 ms
+(; as follows: as n >= 0 is an integer,)61.2 114.9 ms
+(; and as each call to fact reduces the value of this parameter by 1, and as the proced)61.2 104.9 ms
+(ure)61.2 94.9 ms
+(; halts when n = 0, we see that any call \(fact n\) will terminate.  )61.2 84.9 ms
+re sp
+%%PageTrailer
+%%Page: 2 2
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture3.scm                                                                    Page 2)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; another design for a factoral procedure does not create a chain of)61.2 714.9 ms
+(; deferred operations)61.2 704.9 ms
+0.753 0 0.753 r
+(\()61.2 684.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(new-fact x)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 674.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(fact-iter x )s
+0 0 0.753 r
+(0)s
+0 g
+( )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+(\()61.2 654.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fact-iter x count result)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 644.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( count x)s
+0.753 0 0.753 r
+(\))s
+0 g
+(      result)61.2 634.9 ms
+(      )61.2 624.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(fact-iter x )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( count )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( count )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( result)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0.753 0 0 r
+(; here we see that the work is done by updating the values of count and)61.2 594.9 ms
+(; result)61.2 584.9 ms
+(;; \(new-fact 6\))61.2 564.9 ms
+(;; \(fact-iter 6 0 1\))61.2 554.9 ms
+(;; \(fact-iter 6 1 1\))61.2 544.9 ms
+(;; \(fact-iter 6 2 2\))61.2 534.9 ms
+(;; \(fact-iter 6 3 6\))61.2 524.9 ms
+(;; \(fact-iter 6 4 24\))61.2 514.9 ms
+(;; \(fact-iter 6 5 120\))61.2 504.9 ms
+(;; \(fact-iter 6 6 720\))61.2 494.9 ms
+(; such processes are said to be linear recursive, or iterative)61.2 454.9 ms
+(; an alternate organization of the iterative version  casts fact-iter as a local funct)61.2 414.9 ms
+(ion:)61.2 404.9 ms
+0.753 0 0.753 r
+(\()61.2 384.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(new-fact n)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 374.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fact-iter count result)s
+0.753 0 0.753 r
+(\))s
+0 g
+(    )61.2 364.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( count n)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        result)61.2 354.9 ms
+(        )61.2 344.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(fact-iter )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( count )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( count )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( result)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0 g
+(  )61.2 334.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(fact-iter )s
+0 0 0.753 r
+(0)s
+0 g
+( )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+0.753 0 0 r
+(; can you see the advantages of using a local function in this instance?  observe, for)61.2 304.9 ms
+( example,)61.2 294.9 ms
+(; that there is no need to pass the parameter x to the looping function fact-iter when)61.2 284.9 ms
+( it is)61.2 274.9 ms
+(; defined inside new-fact.  observe as well that the second form results in less clutt)61.2 264.9 ms
+(er)61.2 254.9 ms
+(; in the global namespace. )61.2 244.9 ms
+(; now for a proof that the iterative version works as advertised)61.2 214.9 ms
+(; one certifies the correctness of \(either version of\) fact-iter by)61.2 184.9 ms
+(; exploiting an invariant relationship which holds among the program's)61.2 174.9 ms
+(; variables:)61.2 164.9 ms
+(;  as the program runs, result = count!)61.2 144.9 ms
+(; what good is this?  if it holds when the program exits, and if count = n)61.2 124.9 ms
+(; when the program exits, then the value returned \(namely, result\) is)61.2 114.9 ms
+(; equal to n!  that is, we can use the relation to show that the program)61.2 104.9 ms
+(; works correctly.)61.2 94.9 ms
+(; we use induction - this time on the number of calls to fact-iter -)61.2 74.9 ms
+(; to show that the invariant relationship, namely result = count!, holds )61.2 64.9 ms
+(; every time fact-iter is called.)61.2 54.9 ms
+re sp
+%%PageTrailer
+%%Page: 3 3
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture3.scm                                                                    Page 3)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; the basis step is then to show that result = count! the first time)61.2 724.9 ms
+(; fact-iter is called.  as we initialize count to 0 and result to 1,)61.2 714.9 ms
+(; this is clear.)61.2 704.9 ms
+(; the induction hypothesis: assume result = count! on the kth call to)61.2 684.9 ms
+(; fact-iter)61.2 674.9 ms
+(; the induction step: on the \(k+1\)st call to fact-iter, the value of)61.2 654.9 ms
+(; count in the body of fact-iter is k and - by the induction hypothesis -)61.2 644.9 ms
+(; the value of result is k!.  so now look at the code: count is replaced)61.2 634.9 ms
+(; by \(+ count 1\) and result by \(* \(+ count 1\) result\).  so we need to check)61.2 624.9 ms
+(; that \(* \(+ count 1\) k!\) is in fact \(k + 1\)!.  but this is clear.)61.2 614.9 ms
+(; it follows then that count! = result, each time fact-iter is called.)61.2 594.9 ms
+(; In particular, this equation holds the last time fact-iter is called -)61.2 584.9 ms
+(; that is, just before it exits.  looking at the code, we see that the)61.2 574.9 ms
+(; value returned \(ie, result\) is n!, just as we wanted. )61.2 564.9 ms
+(; we've demonstrated - modulo the correctness of the underlying arithmetic)61.2 544.9 ms
+(; operations and number representations - that \(new-fact n\) computes n!)61.2 534.9 ms
+(; \(providing n >= 0 -- more about input restrictions - called)61.2 514.9 ms
+(; pre-conditions - later\))61.2 504.9 ms
+(; such relationships are not always this easy to spot, but we shall be on)61.2 454.9 ms
+(; the lookout for them when designing iterative processes)61.2 444.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 394.9 ms
+(; another example showing the difference between recursion and iteration -)61.2 374.9 ms
+(; material from section 1.2.4 in sicp \(the proof discussion is added locally!\))61.2 364.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 344.9 ms
+(; exponentiation )61.2 324.9 ms
+(; compute b^n = b * b^\(n-1\))61.2 304.9 ms
+(;         b^0 = 1)61.2 294.9 ms
+(; assuming b <> 0, and assuming n >= 0 is an integer)61.2 284.9 ms
+0.753 0 0.753 r
+(\()61.2 254.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(expt)s
+0 g
+( b n)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 244.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( n )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(      )61.2 234.9 ms
+0 0 0.753 r
+(1)s
+0 g
+(      )61.2 224.9 ms
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( b )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(expt)s
+0 g
+( b )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(-)s
+0 g
+( n )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+0.753 0 0 r
+(; what kind of process is this?)61.2 194.9 ms
+(; can we transform it, if recursive, to an iterative process?  \(alternately,)61.2 184.9 ms
+(; if it is iterative, can we transform it to a recursive process?\))61.2 174.9 ms
+0.753 0 0.753 r
+(\()61.2 144.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(expt)s
+0 g
+( b n)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 134.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(expt-iter b n )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+(\()61.2 114.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(expt-iter b exponent result-so-far)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 104.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( exponent )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(      result-so-far)61.2 94.9 ms
+(      )61.2 84.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(expt-iter b )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(-)s
+0 g
+( exponent )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( b result-so-far)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0.753 0 0 r
+(; practice: we prove both versions correct)61.2 54.9 ms
+re sp
+%%PageTrailer
+%%Page: 4 4
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture3.scm                                                                    Page 4)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 704.9 ms
+(; induction argument for the recursive expt)61.2 674.9 ms
+(; induction on what?  how about: induction on n)61.2 654.9 ms
+(; basis step: does expt work correctly when n = 0?  in this case, we see)61.2 634.9 ms
+(; that the value returned is 1, and since b^0 is always 1 for b <> 0, that this value )61.2 624.9 ms
+(is correct)61.2 614.9 ms
+(; induction hypothesis: we assume \(expt b n\) returns the correct value, ie, b^n)61.2 594.9 ms
+(; induction step: we argue, using the induction hypothesis, that \(expt b \(+ n 1\)\) retu)61.2 574.9 ms
+(rns)61.2 564.9 ms
+(; the correct value.  looking at the code, and noting that \(+ n 1\) is not 0 -- as we a)61.2 554.9 ms
+(ssumed)61.2 544.9 ms
+(; that n >= 0 -- we see that the value returned is \(* b \(expt b n\)\).  but, by the indu)61.2 534.9 ms
+(ction)61.2 524.9 ms
+(; hypothesis, this is b times b^n -- clearly correct.)61.2 514.9 ms
+(; this completes the induction showing correctness of \(expt b n\), for expt defined as )61.2 494.9 ms
+(above,)61.2 484.9 ms
+(; when b <> 0 and n >= 0 an integer)61.2 474.9 ms
+(; actually, there is one more thing to check: does the program ever terminate?  Does i)61.2 444.9 ms
+(t)61.2 434.9 ms
+(; in fact return a value?)61.2 424.9 ms
+(; for this, we argue informally: the input n is a non-negative integer on start, and e)61.2 404.9 ms
+(ach)61.2 394.9 ms
+(; recursive call reduces the value of the n parameter by 1. Eventually n is 0, at whic)61.2 384.9 ms
+(h point)61.2 374.9 ms
+(; the program terminates.)61.2 364.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 324.9 ms
+(; given the importance of the input restrictions for both the factorial and exponentia)61.2 304.9 ms
+(tion)61.2 294.9 ms
+(; procedures, we introduce the concept of _specification_)61.2 284.9 ms
+(; a specification - for now, in this course - will be a triple of the form)61.2 264.9 ms
+(; {input restrictions} procedure-call {description of returned value})61.2 244.9 ms
+(; frequently we will refer to {input restrictions} as the pre-condition, and)61.2 224.9 ms
+(; to {description of returned value} as the post-condition)61.2 214.9 ms
+(; for example: if the precondition \(b <> 0 AND n >= 0 AND n is an integer\) is satisfie)61.2 184.9 ms
+(d,)61.2 174.9 ms
+(; the call \(expt b n\) will correctly compute the value b^n)61.2 164.9 ms
+(; for example: if the precondition \(n >=0 AND n is an integer\) is satisfied, then)61.2 144.9 ms
+(; \(new-fact n\) will correctly compute n!)61.2 134.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 104.9 ms
+(; preconditions are better, the weaker \(less specific\) they are, provided they are sti)61.2 84.9 ms
+(ll)61.2 74.9 ms
+(; strong enough for the proof to work)61.2 64.9 ms
+(; for example, \(b <> 0 AND b is an integer AND n >= 0 AND n is an integer\) is stronger)61.2 44.9 ms
+re sp
+%%PageTrailer
+%%Page: 5 5
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture3.scm                                                                    Page 5)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; than the precondition we gave above - the second implies the first - but it is unnec)61.2 724.9 ms
+(essarily)61.2 714.9 ms
+(; restrictive: the program and its proof work even if b is not an integer.)61.2 704.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 684.9 ms
+(; again, triples of the form)61.2 664.9 ms
+(; {precondition} proc {postcondition} )61.2 644.9 ms
+(; will be said to be specifications)61.2 624.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 604.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 524.9 ms
+(; let's now display a proof sketch for expt-iter)61.2 504.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 484.9 ms
+(; guess-invariant for expt-iter:  b^N = b^exponent * result, where N is the initial va)61.2 444.9 ms
+(lue of n)61.2 434.9 ms
+(; first check:)61.2 404.9 ms
+(; is the guess-invariant strong enough to imply the desired result when termination oc)61.2 384.9 ms
+(curs?)61.2 374.9 ms
+(; termination occurs when exponent = 0.  When exponent = 0, the guess-invariant)61.2 354.9 ms
+(; is b^N = b^0 * result, ie, b^N = result)61.2 344.9 ms
+(; so now it is worth looking into whether the guess-invariant really is invariant.  Th)61.2 314.9 ms
+(is is)61.2 304.9 ms
+(; a two-step process:)61.2 294.9 ms
+(; is the guess-invariant achieved initially?  Clearly, b^N = b^N * 1, so YES.)61.2 274.9 ms
+(; is the guess-invariant preserved from one call of expt-iter to the next?)61.2 254.9 ms
+(; suppose b^N = b^exponent * result,)61.2 244.9 ms
+(; and consider whether b^N = b^\(exponent - 1\) * \(b * result\).)61.2 234.9 ms
+(; Of course this is true)61.2 214.9 ms
+(; We conclude that our guess-invariant really is invariant. )61.2 184.9 ms
+(; does termination actually occur?  We need to assume here that N >= 0, and that N is )61.2 144.9 ms
+(an)61.2 134.9 ms
+(; integer.  So decreasing exponent by 1 with each call will eventually reach 0.  Termi)61.2 124.9 ms
+(nation)61.2 114.9 ms
+(; does occur.)61.2 104.9 ms
+(; and when it does, we know - from the invariant - that the value returned is b^N.  Th)61.2 74.9 ms
+(e)61.2 64.9 ms
+(; program works!)61.2 54.9 ms
+re sp
+%%PageTrailer
+%%Page: 6 6
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture3.scm                                                                    Page 6)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; what is the specification?)61.2 704.9 ms
+(; pre: b is non-zero and n >= 0 is an integer)61.2 684.9 ms
+(; post: b^n is returned)61.2 674.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 614.9 ms
+(; what test cases would you run, for any of these programs?  What is the)61.2 594.9 ms
+(; role of testing when we have proofs?  Do we abandon testing?)61.2 584.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 564.9 ms
+(; absolutely not!)61.2 544.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 524.9 ms
+(; practice: develop an exponentiation program resulting from this design idea)61.2 494.9 ms
+(;   b^exponent = result-so-far  is maintained invariant as exponent)61.2 474.9 ms
+(;   is increased from 0 to n)61.2 464.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 434.9 ms
+(; homework exercises to be completed for the next class)61.2 414.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 394.9 ms
+(; 1. Exercise 1.7 from A&S)61.2 374.9 ms
+(; 2. Exercise 1.8 from A&S)61.2 364.9 ms
+(; 3. Exercise 1.9 from A&S, with additional requirements)61.2 344.9 ms
+(; consider two procedures for adding two positive integers)61.2 324.9 ms
+0.753 0 0.753 r
+(\()61.2 304.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(my-plus-version-1 a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 294.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( a )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(      b)61.2 284.9 ms
+(      )61.2 274.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(inc )s
+0.753 0 0.753 r
+(\()s
+0 g
+(my-plus-version-1 )s
+0.753 0 0.753 r
+(\()s
+0 g
+(dec a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( b)s
+0.753 0 0.753 r
+(\)\)\)\))s
+(\()61.2 254.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(my-plus-version-2 a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 244.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( a )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(      b)61.2 234.9 ms
+(      )61.2 224.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(my-plus-version-2 )s
+0.753 0 0.753 r
+(\()s
+0 g
+(dec a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(inc b)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0.753 0 0 r
+(; where)61.2 204.9 ms
+0.753 0 0.753 r
+(\()61.2 184.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(inc x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+(\()61.2 164.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(dec x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(-)s
+0 g
+( x )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+0.753 0 0 r
+(; Using the substitution model, illustrate the process generated by each)61.2 124.9 ms
+(; procedure in evaluating \(my-plus 4 5\).  Are the processes recursive or)61.2 114.9 ms
+(; iterative?)61.2 104.9 ms
+(; Certify each procedure, using the appropriate technique, as determined)61.2 84.9 ms
+(; by your answer to the classification question above: for the recursive)61.2 74.9 ms
+(; procedure, give a proof based on the size of \(one of\) the arguments; for)61.2 64.9 ms
+(; the iterative procedure, give a proof which uses an invariant \(which you)61.2 54.9 ms
+(; must first discover\))61.2 44.9 ms
+re sp
+%%PageTrailer
+%%Page: 7 7
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture3.scm                                                                    Page 7)61.2 744.9 ms
+re sp
+%%PageTrailer
+%%Trailer
+%%Pages: 7
+%%EOF
+

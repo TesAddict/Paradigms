@@ -125,6 +125,15 @@
 
 ; INSERT YOUR ANSWER HERE
 
+(define (genper? number combiner)
+  (define (genper-helper? n sum)
+    (cond ((= number n) (cond ((= number sum) #t)
+                              (else #f)))
+          ((= (modulo number n) 0) (genper-helper? (+ n 1) (combiner sum n)))
+          (else (genper-helper? (+ n 1) sum))))
+  (cond ((
+  
+
 
 
 ; Problem 4a (20 points)  Write a program reverse-number to reverse the digits of a number. For example,

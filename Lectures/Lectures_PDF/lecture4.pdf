@@ -1,0 +1,1609 @@
+%!PS-Adobe-3.0
+%%Title: lecture4.scm
+%%For: methos
+%%Creator: VIM - Vi IMproved 8.0 (2016 Sep 12)
+%%CreationDate: Tue Mar  5 22:12:14 2019
+%%DocumentData: Clean8Bit
+%%Orientation: Portrait
+%%Pages: (atend)
+%%PageOrder: Ascend
+%%BoundingBox: 61 42 577 752
+%%DocumentMedia: letter 612 792 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%DocumentSuppliedResources: procset VIM-Prolog 1.4 1
+%%+ encoding VIM-latin1 1.0 0
+%%Requirements: duplex collate color
+%%EndComments
+%%BeginDefaults
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%PageMedia: letter
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset VIM-Prolog
+%%BeginDocument: /usr/share/vim/vim80/print/prolog.ps
+%!PS-Adobe-3.0 Resource-ProcSet
+%%Title: VIM-Prolog
+%%Version: 1.4 1
+%%EndComments
+% Editing of this file is NOT RECOMMENDED.  You run a very good risk of causing
+% all PostScript printing from VIM failing if you do.  PostScript is not called
+% a write-only language for nothing!
+/packedarray where not{userdict begin/setpacking/pop load def/currentpacking
+false def end}{pop}ifelse/CP currentpacking def true setpacking
+/bd{bind def}bind def/ld{load def}bd/ed{exch def}bd/d/def ld
+/db{dict begin}bd/cde{currentdict end}bd
+/T true d/F false d
+/SO null d/sv{/SO save d}bd/re{SO restore}bd
+/L2 systemdict/languagelevel 2 copy known{get exec}{pop pop 1}ifelse 2 ge d
+/m/moveto ld/s/show ld /ms{m s}bd /g/setgray ld/r/setrgbcolor ld/sp{showpage}bd
+/gs/gsave ld/gr/grestore ld/cp/currentpoint ld
+/ul{gs UW setlinewidth cp UO add 2 copy newpath m 3 1 roll add exch lineto
+stroke gr}bd
+/bg{gs r cp BO add 4 -2 roll rectfill gr}bd
+/sl{90 rotate 0 exch translate}bd
+L2{
+/sspd{mark exch{setpagedevice}stopped cleartomark}bd
+/nc{1 db/NumCopies ed cde sspd}bd
+/sps{3 db/Orientation ed[3 1 roll]/PageSize ed/ImagingBBox null d cde sspd}bd
+/dt{2 db/Tumble ed/Duplex ed cde sspd}bd
+/c{1 db/Collate ed cde sspd}bd
+}{
+/nc{/#copies ed}bd
+/sps{statusdict/setpage get exec}bd
+/dt{statusdict/settumble 2 copy known{get exec}{pop pop pop}ifelse
+statusdict/setduplexmode 2 copy known{get exec}{pop pop pop}ifelse}bd
+/c{pop}bd
+}ifelse
+/ffs{findfont exch scalefont d}bd/sf{setfont}bd
+/ref{1 db findfont dup maxlength dict/NFD ed{exch dup/FID ne{exch NFD 3 1 roll
+put}{pop pop}ifelse}forall/Encoding findresource dup length 256 eq{NFD/Encoding
+3 -1 roll put}{pop}ifelse NFD dup/FontType get 3 ne{/CharStrings}{/CharProcs}
+ifelse 2 copy known{2 copy get dup maxlength dict copy[/questiondown/space]{2
+copy known{2 copy get 2 index/.notdef 3 -1 roll put pop exit}if pop}forall put
+}{pop pop}ifelse dup NFD/FontName 3 -1 roll put NFD definefont pop end}bd
+CP setpacking
+(\004)cvn{}bd
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%BeginResource: encoding VIM-latin1
+%%BeginDocument: /usr/share/vim/vim80/print/latin1.ps
+%!PS-Adobe-3.0 Resource-Encoding
+%%Title: VIM-latin1
+%%Version: 1.0 0
+%%EndComments
+/VIM-latin1[
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/grave /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis]
+/Encoding defineresource pop
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%EndProlog
+%%BeginSetup
+612 792 0 sps
+1 nc
+T F dt
+T c
+%%IncludeResource: font Courier
+/_F0 /VIM-latin1 /Courier ref
+/F0 10 /_F0 ffs
+%%IncludeResource: font Courier-Bold
+/_F1 /VIM-latin1 /Courier-Bold ref
+/F1 10 /_F1 ffs
+%%IncludeResource: font Courier-Oblique
+/_F2 /VIM-latin1 /Courier-Oblique ref
+/F2 10 /_F2 ffs
+%%IncludeResource: font Courier-BoldOblique
+/_F3 /VIM-latin1 /Courier-BoldOblique ref
+/F3 10 /_F3 ffs
+/UO -1 d
+/UW 0.5 d
+/BO -2.5 d
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture4.scm                                                                    Page 1)61.2 744.9 ms
+F0 sf
+( )61.2 724.9 ms
+0.753 0 0 r
+(; CSc 335)s
+(; Lecture 4)61.2 714.9 ms
+(; February 14 2019)61.2 704.9 ms
+(; Solution to Homework 1, Exercise 3)61.2 654.9 ms
+0.753 0 0.753 r
+(\()61.2 624.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(my-plus-version-1 a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 614.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( a )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(      b)61.2 604.9 ms
+(      )61.2 594.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(inc )s
+0.753 0 0.753 r
+(\()s
+0 g
+(my-plus-version-1 )s
+0.753 0 0.753 r
+(\()s
+0 g
+(dec a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( b)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0.753 0 0 r
+(; my-plus-version-1 is properly recursive, as you can see from either the syntax \(the)61.2 564.9 ms
+(; recursive call is guarded\) or by expanding a typical call and noting the deferred ca)61.2 554.9 ms
+(lls)61.2 544.9 ms
+(; to inc)61.2 534.9 ms
+(; accordingly, and noting that the program works by decreasing a,  we construct a cert)61.2 514.9 ms
+(ification)61.2 504.9 ms
+(; by giving an induction on a: that is, we show that for all integers a >= 0, and for )61.2 494.9 ms
+(all numbers)61.2 484.9 ms
+(; b, the value of \(my-plus-version-1 a b\) is a + b )61.2 474.9 ms
+(; basis step: when a = 0, \(my-plus-version-1 a b\) returns b, which of course is 0 + b )61.2 454.9 ms
+(= a + b)61.2 444.9 ms
+(; induction hypothesis: assume that the recursive call returns the correct value - tha)61.2 424.9 ms
+(t is, that)61.2 414.9 ms
+(; \(my-plus-version-1 \(dec a\) b\) returns \(a - 1\) + b)61.2 404.9 ms
+(; induction step: show that \(my-plus-version-1 a b\) returns a + b when a > 0.  Looking)61.2 384.9 ms
+( at the code,)61.2 374.9 ms
+(; we see that \(my-plus-version-1 a b\), when a > 0, is just \(inc \(my-plus-version-1 \(de)61.2 364.9 ms
+(c a\) b\)\).)61.2 354.9 ms
+(; By the induction hypothesis, and the definition of inc, this is 1 + \(\(a - 1\) + b\), o)61.2 344.9 ms
+(r a + b)61.2 334.9 ms
+(; termination: the integer a >= 0 is decremented by 1 with each recursive call - it wi)61.2 304.9 ms
+(ll eventually)61.2 294.9 ms
+(; reach 0, which will halt the program)61.2 284.9 ms
+0.753 0 0.753 r
+(\()61.2 244.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(my-plus-version-2 a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 234.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( a )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(      b)61.2 224.9 ms
+(      )61.2 214.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(my-plus-version-2 )s
+0.753 0 0.753 r
+(\()s
+0 g
+(dec a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(inc b)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0.753 0 0 r
+(; my-plus-version-2 is tail-recursive, or iterative, as you can see from either the sy)61.2 184.9 ms
+(ntax \(the)61.2 174.9 ms
+(; recursive call is unguarded\) or by expanding a typical call and noting the absence o)61.2 164.9 ms
+(f deferred)61.2 154.9 ms
+(; calls to any function)61.2 144.9 ms
+(; to make a first guess at the guess-invariant, we will in fact expand a typical call )61.2 124.9 ms
+(-- say)61.2 114.9 ms
+(; \(my-plus-version-2 4 5\))61.2 94.9 ms
+(; \(my-plus-version-2 3 6\))61.2 84.9 ms
+(; \(my-plus-version-2 2 7\))61.2 74.9 ms
+(; \(my-plus-version-2 1 8\))61.2 64.9 ms
+(; \(my-plus-version-2 0 9\))61.2 54.9 ms
+(; 9)61.2 44.9 ms
+re sp
+%%PageTrailer
+%%Page: 2 2
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture4.scm                                                                    Page 2)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; we observe that the sum of the values of a and b is constant - in fact, that the sum)61.2 714.9 ms
+( is)61.2 704.9 ms
+(; always the actual sum of a and b.  So our guess-invariant is quite reasonably taken )61.2 694.9 ms
+(to be)61.2 684.9 ms
+(; actual-sum-of-original-values-of-a-and-b = a + b)61.2 654.9 ms
+(; this is kind of awkward.  How about agreeing that we will use A to denote the origin)61.2 624.9 ms
+(al)61.2 614.9 ms
+(; \(input\) value of a, and B to denote the original value of b.  Our convention will be)61.2 604.9 ms
+(; that these values are constant -- some people refer to them as 'ghost variables')61.2 594.9 ms
+(; \(eg, see J. C. Reynolds, The Craft of Programming\))61.2 574.9 ms
+(; so now we can write our initial guess-invariant more simply as A + B = a + b)61.2 554.9 ms
+(; we said at the end of Lecture 3 that one subjects guess-invariants to 3 tests, using)61.2 514.9 ms
+( these)61.2 504.9 ms
+(; to refine the guess-invariant \(if necessary\) to produce a better approximation of th)61.2 494.9 ms
+(e)61.2 484.9 ms
+(; actual invariant.)61.2 474.9 ms
+(; the first test:  is our guess invariant strong enough to imply the program's correct)61.2 444.9 ms
+(ness)61.2 434.9 ms
+(; on termination?  That is, assuming that the guess invariant is true each time the fu)61.2 424.9 ms
+(nction)61.2 414.9 ms
+(; my-plus-version-2 is called, does it imply that \(my-plus-version-2 a b\) returns A + )61.2 404.9 ms
+(B?  Well,)61.2 394.9 ms
+(; have a look at the code.  The last time the function is called, a = 0, and then the )61.2 384.9 ms
+(value b)61.2 374.9 ms
+(; is returned.  So if A + B = a + b, then A + B = 0 + b -- the value of b is precisely)61.2 364.9 ms
+( A + B.)61.2 354.9 ms
+(; so the guess invariant passes our first test)61.2 324.9 ms
+(; the second test: is our guess invariant true the first time the function is called?)61.2 294.9 ms
+(; Again, we just examine the code: on first call, a = A and b = B.  There is nothing t)61.2 284.9 ms
+(o)61.2 274.9 ms
+(; prove!)61.2 264.9 ms
+(; the third test: if our guess invariant is true the kth time the function is called,)61.2 224.9 ms
+(; is it true on the \(k+1\)st call?  Everything is in the code:  if A + B = a + b on the)61.2 214.9 ms
+(; kth call, then because the new parameter values for a and b are \(a - 1\) and \(b + 1\),)61.2 204.9 ms
+(; respectively, it is clear that the guess invariant is true on the \(k + 1\)st call.)61.2 194.9 ms
+(; thus we see that the guess invariant passes all three tests: it can be promoted to)61.2 164.9 ms
+(; invariant)61.2 154.9 ms
+(; all that remains to do is to argue that the program terminates - the argument is jus)61.2 124.9 ms
+(t)61.2 114.9 ms
+(; like the one we used for the recursive version.)61.2 104.9 ms
+(; this completes the solution of the homework problem)61.2 54.9 ms
+re sp
+%%PageTrailer
+%%Page: 3 3
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture4.scm                                                                    Page 3)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; it is worth emphasizing some additional points which arise naturally in discussing s)61.2 704.9 ms
+(uch)61.2 694.9 ms
+(; correctness arguments)61.2 684.9 ms
+(; first - do not ignore program testing.  It is at least as likely to make errors in c)61.2 654.9 ms
+(onstructing)61.2 644.9 ms
+(; proofs as it is in constructing programs - a few judiciously chosen tests help incre)61.2 634.9 ms
+(ase our)61.2 624.9 ms
+(; confidence in whatever code we write.  Let's revisit the example computed in class,)61.2 614.9 ms
+(; \(fact 1000\): what exactly do we gain when we furnish our program with a proof?  Sure)61.2 604.9 ms
+(ly,)61.2 594.9 ms
+(; we still cannot tell for certain that the 196th digit of the returned value is corre)61.2 584.9 ms
+(ct!)61.2 574.9 ms
+(;; ; what we gain is this: if there is an error in the returned value, we can be quite)61.2 554.9 ms
+( sure that it is not)61.2 544.9 ms
+(;; ; due to an error in our algorithm.  Literally dozens of subsystems contribute to t)61.2 534.9 ms
+(he)61.2 524.9 ms
+(;; ; successful evaluation of a program, from the operating system kernel to)61.2 514.9 ms
+(;; ; the bignum libraries to the scheme compiler)61.2 504.9 ms
+(;; ; itself: all we can do is hope that all of these have been certified as carefully )61.2 494.9 ms
+(as we certified)61.2 484.9 ms
+(;; ; our own algorithm. )61.2 474.9 ms
+(; second, for any induction, an ellipsis \(that is, ...\) should never occur in the indu)61.2 444.9 ms
+(ction step.)61.2 434.9 ms
+(; one gives away most of the software engineering benefit of this approach)61.2 424.9 ms
+(; to program certification if one 'unwraps' the induction hypothesis.)61.2 414.9 ms
+(; Returning to our discussion of factorial: one argues that)61.2 404.9 ms
+(; \(* n \(factorial \(- n 1\)\)\) returns n! because - by the induction)61.2 394.9 ms
+(; hypothesis - \(factorial \(- n 1\)\) returns \(n - 1\)!.  Not because)61.2 384.9 ms
+(; \(factorial \(- n 1\)\) expands to \(- n 1\) * \(factorial \(- n 2\)\), which)61.2 374.9 ms
+(; expands to \(- n 1\) * \(- n 2\) * \(factorial \(- n 3\)\), which ...)61.2 364.9 ms
+(; third, for iterative processes, one works to develop a guess at the invariant -)61.2 334.9 ms
+(; call it the guess-invariant.  To refine this guess, check)61.2 324.9 ms
+(; \(a\) whether the logical AND of the stopping condition and the guess-invariant)61.2 314.9 ms
+(; implies that the program works, and \(b\) that the truth of the guess-invariant)61.2 304.9 ms
+(; on the kth call of the procedure implies its truth on the \(k+1\)st call.)61.2 294.9 ms
+(; If either \(a\) or \(b\) does not hold, revise the guess-invariant. Repeat)61.2 284.9 ms
+(; until both tests succeed.  Once they do, check the hardest condition: that the)61.2 274.9 ms
+(; truth of the guess-invariant on the kth call implies its truth on the \(K+1\)st)61.2 264.9 ms
+(; call.  If this is so, then you are done; if not, you need to revise the guess-invari)61.2 254.9 ms
+(ant)61.2 244.9 ms
+(; yet again, and repeat the entire process.)61.2 234.9 ms
+(; This is a heuristic process, with no guarantee that it will lead to the correct)61.2 214.9 ms
+(; invariant.  You can rest assured, however, that every iterative process actually doe)61.2 204.9 ms
+(s)61.2 194.9 ms
+(; have an invariant.)61.2 184.9 ms
+(; Professional documentation for an iterative function could consist of its specificat)61.2 164.9 ms
+(ion,)61.2 154.9 ms
+(; its invariant, and an informal termination argument -- nothing more would be necessa)61.2 144.9 ms
+(ry)61.2 134.9 ms
+(; Don't forget to include the termination argument!)61.2 114.9 ms
+(; fourth, we say something more about specifications of the kind we shall use in CSc 3)61.2 84.9 ms
+(35:)61.2 74.9 ms
+(; a specification of the form)61.2 54.9 ms
+re sp
+%%PageTrailer
+%%Page: 4 4
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture4.scm                                                                    Page 4)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; {pre-condition} program {post-condition})61.2 724.9 ms
+(; is intended to be read as an implication -- If the pre-condition is satisfied, and I)61.2 704.9 ms
+(F)61.2 694.9 ms
+(; the program terminates, then the post-condition will be satisfied when the program)61.2 684.9 ms
+(; does terminate)61.2 674.9 ms
+(; When we say that a program meets its specification, we mean only that this implicati)61.2 644.9 ms
+(on)61.2 634.9 ms
+(; is true.  In particular, were one to violate the precondition, then all bets are off)61.2 624.9 ms
+(:)61.2 614.9 ms
+(; you cannot sue me for trying to use my integer division program to divide a by 0 if)61.2 604.9 ms
+(; this program satisfies a specification which includes the input restriction that)61.2 594.9 ms
+(; the denominator be non-zero.)61.2 584.9 ms
+(; more, one wants to make the precondition as general \(weak\) as possible, since to do)61.2 544.9 ms
+(; otherwise may unnecessarily restrict the application of the program.  In our additio)61.2 534.9 ms
+(n)61.2 524.9 ms
+(; programs, above, there is for example no reason to insist that the input b be positi)61.2 514.9 ms
+(ve,)61.2 504.9 ms
+(; or that it be an integer.)61.2 494.9 ms
+(; practice: which of these specifications would be better?)61.2 464.9 ms
+(; {true} program {your post-condition})61.2 444.9 ms
+(; {false} program {your post-condition})61.2 434.9 ms
+(; do you see from your understanding of implication \(recall that F ==> Q is always tru)61.2 404.9 ms
+(e\))61.2 394.9 ms
+(; that the second specification imposes no restrictions at all on the program?)61.2 384.9 ms
+(; do you see that the first specification imposes no restrictions at all on the input?)61.2 364.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 294.9 ms
+(; Section 1.2.2 in Abelson and Sussman)61.2 274.9 ms
+(; Tree Recursion)61.2 254.9 ms
+0.753 0 0.753 r
+(\()61.2 234.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fib n)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 224.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( n )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 214.9 ms
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( n )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 204.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fib )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(-)s
+0 g
+( n )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fib )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(-)s
+0 g
+( n )s
+0 0 0.753 r
+(2)s
+0.753 0 0.753 r
+(\)\)\)\)\)\))s
+0.753 0 0 r
+(; draw the tree-recursive process for \(say\) \(fib 4\))61.2 174.9 ms
+(; use induction to prove that \(fib n\) computes the nth fibonacci)61.2 154.9 ms
+(; number)61.2 144.9 ms
+(; for practice with induction, show that the number of times \(fib n\))61.2 124.9 ms
+(; computes \(fib 0\) or \(fib 1\) is \(fib \(+ n 1\)\))61.2 114.9 ms
+(; observation: one can use Binet's formula \(Google it!\) to show that \(fib n\) requires )61.2 94.9 ms
+(time)61.2 84.9 ms
+(; which grows exponentially with n)61.2 74.9 ms
+(; sometimes we can see how to replace tree recursions by iterative processes)61.2 44.9 ms
+re sp
+%%PageTrailer
+%%Page: 5 5
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture4.scm                                                                    Page 5)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; consider)61.2 704.9 ms
+0.753 0 0.753 r
+(\()61.2 684.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fib n)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 674.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(fib-iter )s
+0 0 0.753 r
+(1)s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0 g
+( n)s
+0.753 0 0.753 r
+(\)\))s
+(\()61.2 654.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fib-iter a b count)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 644.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( count )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(      b)61.2 634.9 ms
+(      )61.2 624.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(fib-iter )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( a )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(-)s
+0 g
+( count )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0.753 0 0 r
+(; use an invariant-based induction to prove that \(fib n\) computes the)61.2 584.9 ms
+(; nth fibonacci number)61.2 574.9 ms
+(; a good way to get started on finding a guess-invariant is to ask yourself: what role)61.2 544.9 ms
+( is fulfilled by)61.2 534.9 ms
+(; each variable?)61.2 524.9 ms
+(; that is, it is often useful to enumerate the _design roles_ of the variables)61.2 504.9 ms
+(; some experimentation is usually required to find design roles)61.2 484.9 ms
+(; which work)61.2 474.9 ms
+(; let's observe that b is supposed to be the nth fibonacci number when the program ter)61.2 454.9 ms
+(minates)61.2 444.9 ms
+(; let's observe that the program terminates when count = 0)61.2 434.9 ms
+(; let's observe that count is initially n, and b is initially 0)61.2 424.9 ms
+(; can you spot a model which fits these data?  how about)61.2 404.9 ms
+(; b is the \(n - count\)th fibonacci number)61.2 384.9 ms
+(; certainly this fits as far as we have gone.  what about a design role for the parame)61.2 364.9 ms
+(ter a?)61.2 354.9 ms
+(; let's observe that as the program runs, a is always the fibonacci number which comes)61.2 334.9 ms
+( after b)61.2 324.9 ms
+(; so we take as design role for a:)61.2 304.9 ms
+(; a is the \(n + 1 - count\)th fibonacci number)61.2 284.9 ms
+(; sometimes, as here, the guess invariant can be given simply as the logical AND of th)61.2 254.9 ms
+(e design roles)61.2 244.9 ms
+(; \(you should check that this works!\))61.2 224.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 194.9 ms
+(; is the proof easier if we change the design role of count? maybe have it)61.2 164.9 ms
+(; count up rather than down? Try this for homework! Here is some code)61.2 154.9 ms
+0.753 0 0.753 r
+(\()61.2 114.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fib n)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 104.9 ms
+(  )61.2 94.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fib-iter a b count)s
+0.753 0 0.753 r
+(\))s
+0 g
+(    )61.2 84.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(if)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( count n)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        b)61.2 74.9 ms
+(        )61.2 64.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(fib-iter )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( a )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( count )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0 g
+(  )61.2 44.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(fib-iter )s
+0 0 0.753 r
+(1)s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\)\))s
+re sp
+%%PageTrailer
+%%Page: 6 6
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture4.scm                                                                    Page 6)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; now the design roles are:)61.2 704.9 ms
+(; b is the nth fibonacci number \(remember that we start with 0\))61.2 684.9 ms
+(; a is the \(n + 1\)st fibonacci number)61.2 674.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 644.9 ms
+(; still, we might ask whether we really need to compute the \(N+1\)st fibonacci number)61.2 614.9 ms
+(; in order to return the Nth fibonacci number.)61.2 604.9 ms
+(; what about a design such as this?)61.2 584.9 ms
+0.753 0 0.753 r
+(\()61.2 564.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fib n)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 544.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fib-iter curr prev count)s
+0.753 0 0.753 r
+(\))s
+0 g
+(    )61.2 534.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( count n)s
+0.753 0 0.753 r
+(\))s
+0 g
+( curr)s
+0.753 0 0.753 r
+(\))s
+0 g
+(          )61.2 524.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fib-iter )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( curr prev)s
+0.753 0 0.753 r
+(\))s
+0 g
+( curr )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( count )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+0 g
+(  )61.2 504.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( n )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 494.9 ms
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( n )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 484.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(fib-iter )s
+0 0 0.753 r
+(1)s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0 g
+( )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0.753 0 0 r
+(; what are the design roles of curr and prev?  what is the invariant?  is this version)61.2 454.9 ms
+( correct?)61.2 444.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 404.9 ms
+(; observe that the last versions of fib are linear iterations)61.2 344.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 294.9 ms
+(; tree recursions are inefficient, but nonetheless useful because)61.2 264.9 ms
+(; they are relatively easy to design.  if one had a tool which)61.2 254.9 ms
+(; automatically transformed tree recursions to more efficient)61.2 244.9 ms
+(; procedures which compute the same result, one might have a)61.2 234.9 ms
+(; useful \(scalable\) way of approaching otherwise difficult)61.2 224.9 ms
+(; problems)61.2 214.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 184.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 144.9 ms
+(; Leading up to Section 1.3.1 in Abelson and Sussman - and two somewhat more involved )61.2 124.9 ms
+(proof examples)61.2 114.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 94.9 ms
+(; Consider the summation procedure sigma:)61.2 64.9 ms
+0.753 0 0.753 r
+(\()61.2 44.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b)s
+0.753 0 0.753 r
+(\))s
+re sp
+%%PageTrailer
+%%Page: 7 7
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture4.scm                                                                    Page 7)61.2 744.9 ms
+F0 sf
+(  )61.2 724.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 714.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( b)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+0.753 0 0 r
+(; this is a recursive program, but the induction is a bit different from what we have )61.2 684.9 ms
+(seen so far)61.2 674.9 ms
+(; in that we will induct on the size of the gap between a and b:)61.2 664.9 ms
+(;   -----------------------------------------------------------)61.2 634.9 ms
+(;   |              a                            b             |)61.2 624.9 ms
+(;   ----------------------------------------------------------)61.2 614.9 ms
+(;                  | <--------gap\(a,b\)--------->|)61.2 604.9 ms
+(; more specifically, we will take gap\(a,b\) = b - a if b >= a, and 0 otherwise.)61.2 574.9 ms
+(; We will work out the details in class, but note here that the basis step - for gap\(a)61.2 554.9 ms
+(,b\) = 0 - has two cases:)61.2 544.9 ms
+(; if \(> a b\), then the code immediately returns 0, which is the correct value for the )61.2 524.9 ms
+(sum of all values between)61.2 514.9 ms
+(; a and b when a > b)61.2 504.9 ms
+(; if \(= a b\), then the procedure returns \(+ a 0\) = a, again as it ought.)61.2 484.9 ms
+(; for the induction step, observe that gap \(a + 1, b\) is less than gap \(a, b\) when a <)61.2 454.9 ms
+( b)61.2 444.9 ms
+(; Now consider an iterative version)61.2 394.9 ms
+0.753 0 0.753 r
+(\()61.2 374.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 354.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(iter a result-so-far)s
+0.753 0 0.753 r
+(\))s
+0 g
+(    )61.2 344.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( result-so-far)s
+(          )61.2 334.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(iter )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( result-so-far)s
+0.753 0 0.753 r
+(\)\)\)\)\)\))s
+0 g
+(  )61.2 314.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 304.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(iter a a)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0.753 0 0 r
+(; with guess-invariant for iter as follows:)61.2 274.9 ms
+(; a <= b AND result-so-far = sum of all integers i from A up to a, A <= i <= a, where )61.2 254.9 ms
+(A is the)61.2 244.9 ms
+(; original value of the parameter a)61.2 234.9 ms
+(; you can check the invariant conditions; once done, you need to check termination.)61.2 214.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 164.9 ms
+(; for home study)61.2 144.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 124.9 ms
+(; it is instructive to view several alternatives, especially if we take the tact of tr)61.2 94.9 ms
+(ying to discover)61.2 84.9 ms
+(; what \(if anything\) is wrong with each one)61.2 74.9 ms
+(; for example, this version simplifies the code following the internal definition - do)61.2 44.9 ms
+re sp
+%%PageTrailer
+%%Page: 8 8
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture4.scm                                                                    Page 8)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+( we really need)61.2 724.9 ms
+(; that second cond?)61.2 714.9 ms
+0.753 0 0.753 r
+(\()61.2 684.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 664.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(iter a result-so-far)s
+0.753 0 0.753 r
+(\))s
+0 g
+(    )61.2 654.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( result-so-far)s
+0.753 0 0.753 r
+(\))s
+0 g
+(          )61.2 644.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(iter )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a result-so-far)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+0 g
+(  )61.2 624.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(iter a )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\)\))s
+0.753 0 0 r
+(; as guess-invariant, we might take:  result-so-far is the sum of all integers i,)61.2 604.9 ms
+(; A <= i <= a.  Here A is the initial value of the parameter a.)61.2 594.9 ms
+(; is there anything wrong with this?)61.2 574.9 ms
+(; well, when we begin running this through the first of our tests \(is the invariant)61.2 554.9 ms
+(; true the first time iter is called?\), we note a problem: result-so-far is 0,)61.2 544.9 ms
+(; while the sum of all integers i, A <= i <= a, is A when a = A.)61.2 534.9 ms
+(; can we fix this problem by revising the guess-invariant?   Try)61.2 504.9 ms
+(;   result-so-far is the sum of all integers i, A <= i < a.)61.2 494.9 ms
+(; Now when a = A, this sum is 0, because no integers satisfy A <= i < A, and the empty)61.2 474.9 ms
+( sum is 0 by definition)61.2 464.9 ms
+(; Looking good! But while the new guess-invariant passes the first test, it fails the )61.2 444.9 ms
+(second \(is the invariant)61.2 434.9 ms
+(; strong enough to imply that the program is correct when it terminates?\): the problem)61.2 424.9 ms
+(; is that all we know from the code on termination about a is that it is greater than )61.2 414.9 ms
+(b.  It could)61.2 404.9 ms
+(; be b+1, or b+2, or ...)61.2 394.9 ms
+(;; [I can hear you saying: we know in fact from the history of values in b that its fi)61.2 374.9 ms
+(nal value is)61.2 364.9 ms
+(;; b + 1, and so this version is correct.  But just as we do not want to unwind a recu)61.2 354.9 ms
+(rsion, we also)61.2 344.9 ms
+(;; do not want to allow variables' histories into our correctness checking.  Think of )61.2 334.9 ms
+(the increase)61.2 324.9 ms
+(;; in complexity which would result from this! We want to use what I will call 'static)61.2 314.9 ms
+( logic', and)61.2 304.9 ms
+(;; not 'dynamic logic': we want to keep time out of the picture.])61.2 294.9 ms
+(; so we add another clause to the guess invariant: a <= b+1.  Now, on termination, we)61.2 274.9 ms
+(; would have a > b && a <= b+1, which gives a = b+1.  And then result-so-far, the)61.2 264.9 ms
+(; sum of all integers i, A <= i < b+1, would in fact be what we want: the sum of all)61.2 254.9 ms
+(; integers i, A <= i <= b.)61.2 244.9 ms
+(; adding this clause, however, triggers another problem: how do we know a <= b+1 when)61.2 214.9 ms
+(; iter is first called?  At the moment, we do not know this:)61.2 204.9 ms
+(; pre: a and b are integers)61.2 184.9 ms
+(; post: the sum of all integers i, a <= i <= b, is returned)61.2 174.9 ms
+(; not wanting to modify the precondition \(why?\), we opt instead to modify the code)61.2 154.9 ms
+(; guess-code-version-2:)61.2 134.9 ms
+0.753 0 0.753 r
+(\()61.2 104.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 84.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(iter a result-so-far)s
+0.753 0 0.753 r
+(\))s
+0 g
+(    )61.2 74.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( result-so-far)s
+0.753 0 0.753 r
+(\))s
+0 g
+(          )61.2 64.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(iter )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a result-so-far)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+0 g
+(  )61.2 44.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( b )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+re sp
+%%PageTrailer
+%%Page: 9 9
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture4.scm                                                                    Page 9)61.2 744.9 ms
+F0 sf
+(        )61.2 724.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(iter a )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0.753 0 0 r
+(; guess-invariant-version-2)61.2 694.9 ms
+(; result-so-far is the sum of all integers i, A <= i < a)61.2 674.9 ms
+(; AND)61.2 664.9 ms
+(; a <= b + 1)61.2 654.9 ms
+(; this all seems to work \(you should work through the details\), but there is still)61.2 624.9 ms
+(; something distasteful about calling iter TWICE when a = b.  I mean, the answer is ju)61.2 614.9 ms
+(st)61.2 604.9 ms
+(; a, right?)61.2 594.9 ms
+(; maybe we could try  guess-code-version-3)61.2 554.9 ms
+0.753 0 0.753 r
+(\()61.2 534.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 514.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(iter a result-so-far)s
+0.753 0 0.753 r
+(\))s
+0 g
+(    )61.2 504.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(=)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a result-so-far)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+(          )61.2 494.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(iter )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a result-so-far)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+0 g
+(  )61.2 474.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 464.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(iter a )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0.753 0 0 r
+(; with guess-invariant-version-3)61.2 434.9 ms
+(; result-so-far is the sum of all integers i, A <= i < a)61.2 414.9 ms
+(; AND)61.2 404.9 ms
+(; a <= b)61.2 394.9 ms
+(; this last version leads naturally enough to the cleaner version we started with.  Th)61.2 364.9 ms
+(e entire)61.2 354.9 ms
+(; sequence of designs illustrates a key point about code development in this setting: )61.2 344.9 ms
+(one uses the logic)61.2 334.9 ms
+(; side-by-side with the code in a mutually supportive refinement process.  We view pro)61.2 324.9 ms
+(grams as)61.2 314.9 ms
+(; fluid systems, with deeply intertwined -- and equally visible -- code and logic comp)61.2 304.9 ms
+(onents. )61.2 294.9 ms
+(; you should work out arguments for the last two versions of sigma! )61.2 264.9 ms
+re sp
+%%PageTrailer
+%%Trailer
+%%Pages: 9
+%%EOF
+

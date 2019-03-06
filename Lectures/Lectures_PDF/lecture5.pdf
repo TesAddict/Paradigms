@@ -1,0 +1,1961 @@
+%!PS-Adobe-3.0
+%%Title: lecture5.scm
+%%For: methos
+%%Creator: VIM - Vi IMproved 8.0 (2016 Sep 12)
+%%CreationDate: Tue Mar  5 22:12:21 2019
+%%DocumentData: Clean8Bit
+%%Orientation: Portrait
+%%Pages: (atend)
+%%PageOrder: Ascend
+%%BoundingBox: 61 42 577 752
+%%DocumentMedia: letter 612 792 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%DocumentSuppliedResources: procset VIM-Prolog 1.4 1
+%%+ encoding VIM-latin1 1.0 0
+%%Requirements: duplex collate color
+%%EndComments
+%%BeginDefaults
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%PageMedia: letter
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset VIM-Prolog
+%%BeginDocument: /usr/share/vim/vim80/print/prolog.ps
+%!PS-Adobe-3.0 Resource-ProcSet
+%%Title: VIM-Prolog
+%%Version: 1.4 1
+%%EndComments
+% Editing of this file is NOT RECOMMENDED.  You run a very good risk of causing
+% all PostScript printing from VIM failing if you do.  PostScript is not called
+% a write-only language for nothing!
+/packedarray where not{userdict begin/setpacking/pop load def/currentpacking
+false def end}{pop}ifelse/CP currentpacking def true setpacking
+/bd{bind def}bind def/ld{load def}bd/ed{exch def}bd/d/def ld
+/db{dict begin}bd/cde{currentdict end}bd
+/T true d/F false d
+/SO null d/sv{/SO save d}bd/re{SO restore}bd
+/L2 systemdict/languagelevel 2 copy known{get exec}{pop pop 1}ifelse 2 ge d
+/m/moveto ld/s/show ld /ms{m s}bd /g/setgray ld/r/setrgbcolor ld/sp{showpage}bd
+/gs/gsave ld/gr/grestore ld/cp/currentpoint ld
+/ul{gs UW setlinewidth cp UO add 2 copy newpath m 3 1 roll add exch lineto
+stroke gr}bd
+/bg{gs r cp BO add 4 -2 roll rectfill gr}bd
+/sl{90 rotate 0 exch translate}bd
+L2{
+/sspd{mark exch{setpagedevice}stopped cleartomark}bd
+/nc{1 db/NumCopies ed cde sspd}bd
+/sps{3 db/Orientation ed[3 1 roll]/PageSize ed/ImagingBBox null d cde sspd}bd
+/dt{2 db/Tumble ed/Duplex ed cde sspd}bd
+/c{1 db/Collate ed cde sspd}bd
+}{
+/nc{/#copies ed}bd
+/sps{statusdict/setpage get exec}bd
+/dt{statusdict/settumble 2 copy known{get exec}{pop pop pop}ifelse
+statusdict/setduplexmode 2 copy known{get exec}{pop pop pop}ifelse}bd
+/c{pop}bd
+}ifelse
+/ffs{findfont exch scalefont d}bd/sf{setfont}bd
+/ref{1 db findfont dup maxlength dict/NFD ed{exch dup/FID ne{exch NFD 3 1 roll
+put}{pop pop}ifelse}forall/Encoding findresource dup length 256 eq{NFD/Encoding
+3 -1 roll put}{pop}ifelse NFD dup/FontType get 3 ne{/CharStrings}{/CharProcs}
+ifelse 2 copy known{2 copy get dup maxlength dict copy[/questiondown/space]{2
+copy known{2 copy get 2 index/.notdef 3 -1 roll put pop exit}if pop}forall put
+}{pop pop}ifelse dup NFD/FontName 3 -1 roll put NFD definefont pop end}bd
+CP setpacking
+(\004)cvn{}bd
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%BeginResource: encoding VIM-latin1
+%%BeginDocument: /usr/share/vim/vim80/print/latin1.ps
+%!PS-Adobe-3.0 Resource-Encoding
+%%Title: VIM-latin1
+%%Version: 1.0 0
+%%EndComments
+/VIM-latin1[
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/grave /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis]
+/Encoding defineresource pop
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%EndProlog
+%%BeginSetup
+612 792 0 sps
+1 nc
+T F dt
+T c
+%%IncludeResource: font Courier
+/_F0 /VIM-latin1 /Courier ref
+/F0 10 /_F0 ffs
+%%IncludeResource: font Courier-Bold
+/_F1 /VIM-latin1 /Courier-Bold ref
+/F1 10 /_F1 ffs
+%%IncludeResource: font Courier-Oblique
+/_F2 /VIM-latin1 /Courier-Oblique ref
+/F2 10 /_F2 ffs
+%%IncludeResource: font Courier-BoldOblique
+/_F3 /VIM-latin1 /Courier-BoldOblique ref
+/F3 10 /_F3 ffs
+/UO -1 d
+/UW 0.5 d
+/BO -2.5 d
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture5.scm                                                                    Page 1)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; CSc 335)61.2 704.9 ms
+(; Lecture 5 )61.2 694.9 ms
+(; February 19 2019)61.2 684.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 654.9 ms
+(;;;;;;)61.2 644.9 ms
+(; class: )61.2 624.9 ms
+(;        look at ideas from Section 1.3 of Abelson and Sussman, folded  together with )61.2 614.9 ms
+(our ongoing)61.2 604.9 ms
+(;        discussion of program proving)61.2 594.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 574.9 ms
+(;;;;;;;)61.2 564.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 524.9 ms
+(; Section 1.3  Formulating Abstractions with Higher-Order Procedures)61.2 504.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 484.9 ms
+(; Section 1.3.1 Procedures as Arguments)61.2 464.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 444.9 ms
+(; Consider )61.2 414.9 ms
+0.753 0 0.753 r
+(\()61.2 394.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 384.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 374.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( b)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+0.753 0 0 r
+(; As we have now developed careful proofs for both sigma and its corresponding)61.2 354.9 ms
+(; iterative procedure, we will look at a sequence of procedures which increasingly)61.2 344.9 ms
+(; generalize it.  In the course of doing so, we hope to shed some light on )61.2 334.9 ms
+(; higher order functions and their role in procedural abstraction.)61.2 324.9 ms
+(; the first generalization is via a new parameter, term, which allows us to use)61.2 294.9 ms
+(; the same code for many different computations)61.2 284.9 ms
+0.753 0 0.753 r
+(\()61.2 264.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b term)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 254.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 244.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(term a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( b term)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+0.753 0 0 r
+(; if )61.2 224.9 ms
+0.753 0 0.753 r
+(\()61.2 204.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(term a)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  a)61.2 194.9 ms
+0.753 0 0.753 r
+(\))s
+(\()61.2 174.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sum-integers a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 164.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b term)s
+0.753 0 0.753 r
+(\)\))s
+0.753 0 0 r
+(; or)61.2 144.9 ms
+0.753 0 0.753 r
+(\()61.2 124.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sum-integers a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 114.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( x)s
+0.753 0 0.753 r
+(\)\)\))s
+0.753 0 0 r
+(; we have again the original function. )61.2 84.9 ms
+(; but now we can do much more -- for example, instead of)61.2 54.9 ms
+(; writing an entirely separate function to compute the sum of the squares)61.2 44.9 ms
+re sp
+%%PageTrailer
+%%Page: 2 2
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture5.scm                                                                    Page 2)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(; of the integers from a to b, and another for the sum of the cubes of)61.2 724.9 ms
+(; these integers, we can now reuse the sigma pattern:)61.2 714.9 ms
+0.753 0 0.753 r
+(\()61.2 694.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(square x)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 684.9 ms
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x x)s
+0.753 0 0.753 r
+(\)\))s
+(\()61.2 664.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sum-squares a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 654.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b square)s
+0.753 0 0.753 r
+(\)\))s
+(\()61.2 624.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(cube x)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 614.9 ms
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x )s
+0.753 0 0.753 r
+(\()s
+0 g
+(square x)s
+0.753 0 0.753 r
+(\)\)\))s
+(\()61.2 594.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sum-cubes a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 584.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b cube)s
+0.753 0 0.753 r
+(\)\))s
+0.753 0 0 r
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 554.9 ms
+(; This is a good place to address the question of how one proves correct functions)61.2 534.9 ms
+(; such as sigma which accept other functions as parameters.)61.2 524.9 ms
+(; The short answer is this: one constructs a proof of \(say\) sigma which makes as few)61.2 504.9 ms
+(; assumptions as possible about the parameter, term.  We can see from the code, for ex)61.2 494.9 ms
+(ample, that)61.2 484.9 ms
+(; term needs to be a function of one argument; if we assume that a is an integer, then)61.2 474.9 ms
+(; clearly, term needs to allow integer arguments.  One would also want to say somethin)61.2 464.9 ms
+(g)61.2 454.9 ms
+(; about the value returned by the call \(term a\): for the current function, the best on)61.2 444.9 ms
+(e)61.2 434.9 ms
+(; can do is to say '\(term a\) must be a value which makes sense for +'.  )61.2 424.9 ms
+(; Although we have ignored this issue up until now, the same thing needs to be stated)61.2 404.9 ms
+(; for sigma itself: as part of the induction hypothesis, if one were being incredibly)61.2 394.9 ms
+(; careful, one would say '\(sigma a b term\) returns a value which makes sense for +)61.2 384.9 ms
+(; whenever gap\(a,b\) is less than ... ')61.2 374.9 ms
+(; Continuing further in this direction would have us making assertions about +, >,)61.2 354.9 ms
+(; and on and on through the implementation of recursion to the virtual memory system t)61.2 344.9 ms
+(o ...)61.2 334.9 ms
+(; It is understood, for all of our proofs, that at some reasonable point we stop -- at)61.2 314.9 ms
+( some)61.2 304.9 ms
+(; point we say, simply, that the underlying systems are assumed correct.  In this sens)61.2 294.9 ms
+(e,)61.2 284.9 ms
+(; all of our proofs have been, implicitly, paremetrized proofs.  Now, with function)61.2 274.9 ms
+(; parameters, the parametrization is explicit: we need to state clearly what we assume)61.2 264.9 ms
+( about)61.2 254.9 ms
+(; the actual function parameters.)61.2 244.9 ms
+(; Similarly, any termination argument we give for sigma must now be based on the assum)61.2 224.9 ms
+(ption)61.2 214.9 ms
+(; that the call \(term a\) terminates and returns a value. )61.2 204.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 174.9 ms
+(; let's return to consider further enhancements of sigma.)61.2 154.9 ms
+(; We can, for example, allow variation of the choice of)61.2 134.9 ms
+(; the next term for inclusion in the summation)61.2 124.9 ms
+0.753 0 0.753 r
+(\()61.2 104.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a next b term)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 94.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 84.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(term a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma )s
+0.753 0 0.753 r
+(\()s
+0 g
+(next a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( next b term)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+0.753 0 0 r
+(; now we can obtain the original function as)61.2 54.9 ms
+re sp
+%%PageTrailer
+%%Page: 3 3
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture5.scm                                                                    Page 3)61.2 744.9 ms
+F0 sf
+0.753 0 0.753 r
+(\()61.2 724.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sum-integers a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 714.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+( b )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( x)s
+0.753 0 0.753 r
+(\)\)\))s
+0.753 0 0 r
+(; and also)61.2 684.9 ms
+0.753 0 0.753 r
+(\()61.2 654.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sum-cubes a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 644.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+( b )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x x x)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0.753 0 0 r
+(; we can even compute the sum)61.2 604.9 ms
+(;    1         1          1 )61.2 584.9 ms
+(;  -----  +  -----  +  -------  +  ...)61.2 574.9 ms
+(;  1 * 3     5 * 7      9 * 11)61.2 564.9 ms
+(; \(which is known to converge to pi/8\))61.2 544.9 ms
+(; as)61.2 524.9 ms
+0.753 0 0.753 r
+(\()61.2 504.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(pi-sum a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 494.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(pi-term x)s
+0.753 0 0.753 r
+(\))s
+0 g
+(    )61.2 484.9 ms
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(/)s
+0 g
+( )s
+0 0 0.753 r
+(1.0)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0 0 0.753 r
+(2)s
+0.753 0 0.753 r
+(\)\)\)\))s
+0 g
+(  )61.2 474.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(pi-next x)s
+0.753 0 0.753 r
+(\))s
+0 g
+(    )61.2 464.9 ms
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0 0 0.753 r
+(4)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+(  )61.2 454.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a pi-next b pi-term)s
+0.753 0 0.753 r
+(\)\))s
+(\()61.2 424.9 ms
+0.502 0.502 0 r
+(*)s
+0 g
+( )s
+0 0 0.753 r
+(8)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(pi-sum )s
+0 0 0.753 r
+(1)s
+0 g
+( )s
+0 0 0.753 r
+(1000)s
+0.753 0 0.753 r
+(\)\))s
+(\()61.2 414.9 ms
+0.502 0.502 0 r
+(*)s
+0 g
+( )s
+0 0 0.753 r
+(8)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(pi-sum )s
+0 0 0.753 r
+(1)s
+0 g
+( )s
+0 0 0.753 r
+(5000)s
+0.753 0 0.753 r
+(\)\))s
+0.753 0 0 r
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 374.9 ms
+(; a similar approach works for products)61.2 354.9 ms
+0.753 0 0.753 r
+(\()61.2 334.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(prod a next b term)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 324.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 314.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(term a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(prod )s
+0.753 0 0.753 r
+(\()s
+0 g
+(next a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( next b term)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+0.753 0 0 r
+(; allowing, for example)61.2 284.9 ms
+0.753 0 0.753 r
+(\()61.2 264.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(factorial n)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 254.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(prod )s
+0 0 0.753 r
+(1)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+( n )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( x)s
+0.753 0 0.753 r
+(\)\)\))s
+0.753 0 0 r
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 204.9 ms
+(; this suggests that we abstract + and * to a more general 'combiner', so that sigma a)61.2 184.9 ms
+(nd prod)61.2 174.9 ms
+(; can be obtained as special cases of a more general function, which we call)61.2 164.9 ms
+(; accumulate)61.2 154.9 ms
+0.753 0 0.753 r
+(\()61.2 124.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(accumulate combiner init a next b term)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 114.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( init)s
+0.753 0 0.753 r
+(\))s
+0 g
+(        )61.2 104.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(combiner )s
+0.753 0 0.753 r
+(\()s
+0 g
+(term a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+(                        )61.2 94.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(accumulate combiner init )s
+0.753 0 0.753 r
+(\()s
+0 g
+(next a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( next b term)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+(\()61.2 64.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sigma a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 54.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(accumulate )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x y)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x y)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0 g
+( a )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+(  b )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( x)s
+0.753 0 0.753 r
+(\)\)\))s
+re sp
+%%PageTrailer
+%%Page: 4 4
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture5.scm                                                                    Page 4)61.2 744.9 ms
+F0 sf
+0.753 0 0.753 r
+(\()61.2 714.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(prod a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 704.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(accumulate )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x y)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x y)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+( )s
+0 0 0.753 r
+(1)s
+0 g
+( a )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+( b )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( x)s
+0.753 0 0.753 r
+(\)\)\))s
+0.753 0 0 r
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 664.9 ms
+(; HOMEWORK A&S Exercises 1.29, 1.30, 1.31)61.2 634.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 604.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 574.9 ms
+(; Section 1.3.2  The Relation between Let and Lambda)61.2 554.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 534.9 ms
+(; Let allows one to bind variables as locally as possible to where they are to be used)61.2 494.9 ms
+(.)61.2 484.9 ms
+0.753 0 0.753 r
+(\()61.2 464.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( x )s
+0 0 0.753 r
+(5)s
+0.753 0 0.753 r
+(\))s
+(\()61.2 444.9 ms
+0.502 0.502 0 r
+(+)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(let)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0 g
+(x )s
+0 0 0.753 r
+(3)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+(     )61.2 434.9 ms
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x )s
+0 0 0.753 r
+(10)s
+0.753 0 0.753 r
+(\)\)\))s
+0 g
+(   x)61.2 424.9 ms
+0.753 0 0.753 r
+(\))s
+0.753 0 0 r
+(; let can be realized using lambda -- for example:)61.2 394.9 ms
+0.753 0 0.753 r
+(\()61.2 374.9 ms
+0.502 0.502 0 r
+(+)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x )s
+0 0 0.753 r
+(10)s
+0.753 0 0.753 r
+(\)\)\))s
+0 g
+( )s
+0 0 0.753 r
+(3)s
+0.753 0 0.753 r
+(\))s
+0 g
+(   x)61.2 364.9 ms
+0.753 0 0.753 r
+(\))s
+0.753 0 0 r
+(; One wants to be aware that a variable occurring in the definition part of a let will)61.2 334.9 ms
+( take its)61.2 324.9 ms
+(; value from the context \(environment\) of the let.  In )61.2 314.9 ms
+0.753 0 0.753 r
+(\()61.2 284.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( x )s
+0 0 0.753 r
+(5)s
+0.753 0 0.753 r
+(\))s
+(\()61.2 264.9 ms
+0 0.502 0 r
+(let)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0 g
+(x )s
+0 0 0.753 r
+(3)s
+0.753 0 0.753 r
+(\))s
+0 g
+(      )61.2 254.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(y )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0 0 0.753 r
+(2)s
+0.753 0 0.753 r
+(\)\)\))s
+0 g
+(  )61.2 244.9 ms
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x y)s
+0.753 0 0.753 r
+(\)\))s
+0.753 0 0 r
+(; y will have the value 7 -- the outer x plus 2)61.2 214.9 ms
+(; if one wants the second x to be bound by the first binding \(x 3\), one can use nested)61.2 184.9 ms
+( let, as)61.2 174.9 ms
+(; follows)61.2 164.9 ms
+0.753 0 0.753 r
+(\()61.2 144.9 ms
+0 0.502 0 r
+(let)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0 g
+(x )s
+0 0 0.753 r
+(3)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+(  )61.2 134.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(let)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0 g
+(y )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0 0 0.753 r
+(2)s
+0.753 0 0.753 r
+(\)\)\))s
+0 g
+(    )61.2 124.9 ms
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x y)s
+0.753 0 0.753 r
+(\)\)\))s
+0.753 0 0 r
+(; perhaps more conveniently, use let*)61.2 94.9 ms
+0.753 0 0.753 r
+(\()61.2 74.9 ms
+0 0.502 0 r
+(let*)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0 g
+(x )s
+0 0 0.753 r
+(3)s
+0.753 0 0.753 r
+(\))s
+0 g
+(       )61.2 64.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(y )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x )s
+0 0 0.753 r
+(2)s
+0.753 0 0.753 r
+(\)\)\))s
+0 g
+(  )61.2 54.9 ms
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x y)s
+0.753 0 0.753 r
+(\)\))s
+re sp
+%%PageTrailer
+%%Page: 5 5
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture5.scm                                                                    Page 5)61.2 744.9 ms
+F0 sf
+0.753 0 0 r
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 714.9 ms
+(; HOMEWORK A&S Exercises 1.34, 1.37)61.2 694.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 674.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 624.9 ms
+(; Introduction of Closures)61.2 604.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 584.9 ms
+(; Section 1.3.4  Procedures as Returned Values)61.2 564.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 544.9 ms
+0.753 0 0.753 r
+(\()61.2 524.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(make-addConstant x)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 514.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(y)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x y)s
+0.753 0 0.753 r
+(\)\)\))s
+(\(\()61.2 484.9 ms
+0 g
+(make-addConstant )s
+0 0 0.753 r
+(4)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(5)s
+0.753 0 0.753 r
+(\))s
+(\()61.2 454.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( add4 )s
+0.753 0 0.753 r
+(\()s
+0 g
+(make-addConstant )s
+0 0 0.753 r
+(4)s
+0.753 0 0.753 r
+(\)\))s
+(\()61.2 434.9 ms
+0 g
+(add4 )s
+0 0 0.753 r
+(3)s
+0.753 0 0.753 r
+(\))s
+0.753 0 0 r
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 404.9 ms
+(; curried form of sigma)61.2 374.9 ms
+0.753 0 0.753 r
+(\()61.2 354.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(curried-sigma term)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 344.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sum-term a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+(    )61.2 334.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(cond)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0.502 0.502 0 r
+(>)s
+0 g
+( a b)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0.753 0 0.753 r
+(\))s
+0 g
+(          )61.2 324.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(else)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(term a)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(sum-term )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( a )s
+0 0 0.753 r
+(1)s
+0.753 0 0.753 r
+(\))s
+0 g
+( b)s
+0.753 0 0.753 r
+(\)\)\)\)\))s
+0 g
+(  sum-term)61.2 304.9 ms
+0.753 0 0.753 r
+(\))s
+(\(\()61.2 274.9 ms
+0 g
+(curried-sigma )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( x)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+( )s
+0 0 0.753 r
+(1)s
+0 g
+( )s
+0 0 0.753 r
+(10)s
+0.753 0 0.753 r
+(\))s
+(\()61.2 244.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( sum-of-squares)s
+(  )61.2 234.9 ms
+0.753 0 0.753 r
+(\()s
+0 g
+(curried-sigma )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x x)s
+0.753 0 0.753 r
+(\)\)\)\))s
+(\()61.2 204.9 ms
+0 g
+(sum-of-squares )s
+0 0 0.753 r
+(1)s
+0 g
+( )s
+0 0 0.753 r
+(10)s
+0.753 0 0.753 r
+(\))s
+0.753 0 0 r
+(; contrast to)61.2 174.9 ms
+0.753 0 0.753 r
+(\()61.2 154.9 ms
+0 g
+(sigma )s
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x x)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+( )s
+0 0 0.753 r
+(1)s
+0 g
+( )s
+0 0 0.753 r
+(10)s
+0.753 0 0.753 r
+(\))s
+0.753 0 0 r
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 134.9 ms
+0.753 0 0.753 r
+(\()61.2 94.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(deriv f)s
+0.753 0 0.753 r
+(\))s
+0 g
+(  )61.2 84.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(let)s
+0 g
+( )s
+0.753 0 0.753 r
+(\(\()s
+0 g
+(dx )s
+0 0 0.753 r
+(.00000001)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+(    )61.2 74.9 ms
+0.753 0 0.753 r
+(\()s
+0 0.502 0 r
+(lambda)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(/)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(-)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(f )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(+)s
+0 g
+( x dx)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(f x)s
+0.753 0 0.753 r
+(\)\))s
+0 g
+(                   dx)61.2 64.9 ms
+0.753 0 0.753 r
+(\)\)\)\))s
+(\()61.2 44.9 ms
+0 0.502 0 r
+(define)s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0 g
+(cube x)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0.753 0 0.753 r
+(\()s
+0.502 0.502 0 r
+(*)s
+0 g
+( x x x)s
+0.753 0 0.753 r
+(\)\))s
+re sp
+%%PageTrailer
+%%Page: 6 6
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(lecture5.scm                                                                    Page 6)61.2 744.9 ms
+F0 sf
+0.753 0 0.753 r
+(\(\()61.2 704.9 ms
+0 g
+(deriv cube)s
+0.753 0 0.753 r
+(\))s
+0 g
+( )s
+0 0 0.753 r
+(5)s
+0.753 0 0.753 r
+(\))s
+0.753 0 0 r
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 664.9 ms
+(; We briefly introduce \(what Abelson and Sussman call\))61.2 634.9 ms
+(; the environment model of evaluation, as one means for lending operational)61.2 624.9 ms
+(; intuition to our understanding of closures.)61.2 614.9 ms
+(; Please see Chapter 3 in the A&S text. )61.2 594.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 564.9 ms
+(; HOMEWORK A&S 1.41, 1.42, 1.43)61.2 544.9 ms
+(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;)61.2 524.9 ms
+re sp
+%%PageTrailer
+%%Trailer
+%%Pages: 6
+%%EOF
+
