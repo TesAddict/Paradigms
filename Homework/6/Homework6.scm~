@@ -21,36 +21,6 @@
 ; (replace-nth lst n old new) should replace the nth occurrence of old in 
 ; lst by new (and leave everything else unchanged)
 
-(define my-list '((a b (a d)) (a f)))
-
-(define (atom? element)
-  (cond ((and (not (null? element)) (not (pair? element))) #t)
-        (else #f)))
-
-(define (traversal lst spc-lst)
-  (cond ((null? lst) '())
-        ((null? spc-lst) '())
-        ((atom? lst) (car spc-lst))
-        (else (cons (traversal (car lst) spc-lst) (traversal (cdr lst) spc-lst)))))
-
-(define (fringe lst)
-  (cond ((atom? lst) (list lst))
-        ((null? lst) '())
-        (else (append (fringe (car lst))
-              (fringe (cdr lst))))))
-
-(define (mod-nth lst n old new)
-  (cond ((null? lst) '())
-        ((and (= n 1) (eq? (car lst) old)) (cons new (mod-nth (cdr lst) (- n 1) old new)))
-        ((eq? (car lst) old) (cons (car lst) (mod-nth (cdr lst) (- n 1) old new)))
-        (else (cons (car lst) (mod-nth (cdr lst) n old new)))))
-
-
-  
-
-
-  
-
 
 ; Additional Problems
 
