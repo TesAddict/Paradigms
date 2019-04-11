@@ -221,9 +221,6 @@
       (else (and (same-shape? (car l1) (car l2))
                  (same-shape? (cdr l1) (cdr l2)))))))
 
-(define list1 '(a b c d e f g))
-(define list2 '(a b c d e f g))
-
 ; Here we have used
 
 ;   (eq? x y) = (eq? y x)
