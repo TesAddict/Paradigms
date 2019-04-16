@@ -1,0 +1,2 @@
+(define (atom? element)
+  (and (not (null? element)) (not (pair? element))))
