@@ -200,7 +200,7 @@
 
 (define table-f
   (lambda (name)
-    car ))
+    (car (quote ()))))
 
 ; note that as (car (quote ())) throws an error: when the table is empty,
 ; attempting to look anything up in it is an error.  See the definition

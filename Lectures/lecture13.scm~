@@ -58,10 +58,6 @@
                                   (cdr vals)
                                   entry-f)))))
 
-(define build
-  (lambda (primitive e)
-    (cons primitive (cons e '()))))
-
 
 (define new-entry build)
 
@@ -95,12 +91,6 @@
   (lambda (e table)
     (build (quote non-primitive)
            (cons table (cdr e)))))
-
-(define first car)
-
-(define second cadr)
-
-(define third caddr)
 
 (define table-of first)
 
@@ -142,33 +132,6 @@
 
 
 (value '((lambda (x) (add1 x)) 3))
-
-
-;; e -> '(lambda (x) (add1 x)) 3)
-
-;; table -> '()
-
-;; value -> (meaning e table)
-
-;; meaning -> ((expression-to-action e) e table)
-;; We expect expression-to-action to return a procedure of type *type. Where type
-;; can be one of the 6 possible types in TLS.
-
-;; e is not an atom at this point, so expression-to-action calls...
-;; expression-to-action -> (list-to-action e)
-
-;; list-to-action will evaluate the car of the expression and compare it to 4 possible
-;; types that correspond to lists. (*quote, *lambda, *cond, *application). At this point,
-;; the car of e is:
-;; e1 -> (lambda (x) (add1 x))
-
-;; Application is therefore called with the initial parameters at meaning...
-;; (*application e table)
-
-;; *application -> (myapply (meaning (function-of e) table) (evlis (arguments-of-e) table))
-
-;; (meaning (function-of e) table) -> 
-
 
 
 (value '((lambda (x) (add1 x))
@@ -235,7 +198,7 @@
 
 					;
 
-;We now consider how one can define recursive functions in tls-scheme.
+We now consider how one can define recursive functions in tls-scheme.
 
 ; Thus far, in drscheme, one would use the special form 'define'.  For example
 

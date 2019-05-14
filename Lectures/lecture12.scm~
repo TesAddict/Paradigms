@@ -10,7 +10,6 @@
 
 ; Recall that the top level of the interpreter is given as
 
-
 (define value
   (lambda (e)
     (meaning e (quote () ))))
@@ -19,6 +18,7 @@
 (define meaning
   (lambda (e table)
     ((expression-to-action e) e table)))
+
 
 
 (define expression-to-action
