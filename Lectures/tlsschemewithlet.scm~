@@ -54,19 +54,19 @@
   (lambda (name entry entry-f)
     (lookup-in-entry-help name
                           (names entry)
-                          (val entry)
+                          (values entry)
                           entry-f)))
 
 
 
 (define lookup-in-entry-help
-  (lambda (name names val entry-f)
+  (lambda (name names values entry-f)
     (cond
       ((null? names) (entry-f name))
-      ((eq? (car names) name) (car val))
+      ((eq? (car names) name) (car values))
       (else (lookup-in-entry-help name
                                   (cdr names)
-                                  (cdr val)
+                                  (cdr values)
                                   entry-f)))))
 
 
@@ -77,7 +77,7 @@
 (define names
   (lambda (entry) (car entry)))
 
-(define val
+(define values
   (lambda (entry) (cadr entry)))
 
 
@@ -120,7 +120,6 @@
       ((eq? e (quote zero?)) *const)
       ((eq? e (quote add1)) *const)
       ((eq? e (quote sub1)) *const)
-      ((eq? e (quote sqr)) *const)
       ((eq? e (quote number?)) *const)
       (else *identifier))))
 
@@ -247,15 +246,13 @@
 
 (define *application
   (lambda (e table)
-    (myapply
+    (apply
      (meaning (function-of e) table)
      (evlis (arguments-of e) table))))
 
 (define function-of car)
 
 (define arguments-of cdr)
-
-(define a '((lambda (x) (add1 x)) 3))
 
 
 
@@ -270,7 +267,7 @@
 
 
 
-(define myapply
+(define apply
   (lambda (fun vals)
     (cond
       ((primitive? fun)
@@ -279,10 +276,6 @@
       ((non-primitive? fun)
        (apply-closure
         (second fun) vals)))))
-
-(define add1
-  (lambda (x)
-    (+ x 1)))
 
 
 (define apply-primitive
@@ -307,9 +300,7 @@
       ((eq? name (quote sub1))
        (sub1 (first vals)))
       ((eq? name (quote number?))
-       (number? (first vals)))
-      ((eq? name (quote sqr))
-      (sqr (first vals))))))
+       (number? (first vals))))))
 
 
 (define :atom?
@@ -362,7 +353,6 @@
       (let-body e))
      (let-vals e))))
 
-
 ;;;;;;;;;;;;;;;;;;
 
 (define sample-let-exp-1
@@ -404,44 +394,8 @@
 ;;         4))
 
 
-(define let-struct '(let ((x 1)(y 5)) (let (x 5) (add1 x))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Add a new primitive to TLS!
-; I have added the primitive sqr. This primitive will take a single
-; parameter and return this parameter squared.
-
-(define sqr
-  (lambda (param)
-    (* param param)))
-
-; The atom-to-action procedure was modified. The conditional eq? check
-; for (quote sqr) was added to the TLS atom-to-action procedure.
-; If the question part of this conditional evaluates to true,
-; the answer part returns the procedure *const.
-
-; The apply-primitive procedure was modified to look for the type
-; (primitive sqr). If this is found in the question part of the
-; conditional, the answer part will apply the expected behavior
-; of sqr to it's parameter list.
-
-; The initial round of computation results in '(sqr 4) being evaluated
-; as a list and therefore list-to-action is called. It is not a special
-; non-primitive type so this procedure returns *application.
-; Within application, the meaning procedure is called on the func-of '(sqr 4).
-
-; As mentioned earlier, func-of '(sqr 4) returns sqr. Meaning then calls expression-to-action
-; again, but this time on just sqr. This is an atom, so it calls the atom-to-action procedure,
-; where *const is called next.
-
-; *const returns (primitive sqr). In *application, this return value (primitive sqr) is the
-; first parameter of myapply. The second parameter is the procedure call evlis on the (body-of '(sqr 4)).
-
-; The final call is thus -> (myapply '(primitive sqr) '(4)).
-
-; Change the representation of bindings in the system to explicit pairs of the form (name value).
-
-; I need a new file for this...
 
 
 

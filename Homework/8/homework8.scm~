@@ -39,11 +39,6 @@ Problems
           (lambda (x y) ...)
           val-for-x)
 
-        -> correct form
-       ((lambda (f x) ... (f arg) ... )
-           ((lambda (x y) ...) y)
-           x)
-
 (in which f, bound to a closure, is applied to a number of arguments inconsistent with the closure)
 would also cause your program to reject the input.  
 

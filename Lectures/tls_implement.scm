@@ -1,7 +1,3 @@
-(define mynames '(a b))
-
-(define myvalues '(1 2))
-
 (define first
   (lambda (l)
     (car l)))
@@ -14,17 +10,9 @@
   (lambda (l)
     (car (cdr (cdr l)))))
 
-(define (mylength list)
-  (cond ((null? list) 0)
-        (else (+ 1 (mylength (cdr list))))))
-
 (define (new-entry name value)
   (cons name (cons value '())))
 
-(define entry '((appetizer entree beverage)(food tastes good)))
-
-(define (mylookup-in-entry name entry)
-  (index-to-val (index-of-name name (get-names entry)) (get-vals entry)))
 
 (define (get-names entry)
   (car entry))
@@ -32,17 +20,6 @@
 (define (get-vals entry)
   (cadr entry))
 
-
-(define (index-of-name name names)
-  (cond ((null? names) 0)
-        ((eq? name (car names)) 0)
-        (else (+ 1 (index-of-name name (cdr names))))))
-
-(define (index-to-val index vals)
-  (cond ((= index 0) (car vals))
-        (else (index-to-val (- index 1) (cdr vals)))))
-
-; The Little Schemer Implementation
 (define lookup-in-entry
   (lambda (name entry entry-f)
     (lookup-in-entry-help name
@@ -53,6 +30,7 @@
 (define lookup-in-entry-help
   (lambda (name names values entry-f)
     (cond
+      ((not (eq? (length names) (length values))) (arity-mismatch))
       ((null? names) (entry-f name))
       ((eq? (car names) name) (car values))
       (else (lookup-in-entry-help
@@ -61,21 +39,21 @@
              (cdr values)
              entry-f)))))
 
+
 (define extend-table
   (lambda (entry table)
   (cons entry table)))
+
 
 (define table-f
   (lambda (name)
     (car (quote ()))))
 
-(define table1 (extend-table entry '()))
-(define table2 (extend-table '((a b)(1 2)) table1))
 
 (define lookup-in-table
   (lambda (name table table-f)
     (cond
-      ((null? table) (table-f names))
+      ((null? table) (table-f table))
       (else (lookup-in-entry
              name
              (car table)
@@ -83,12 +61,6 @@
                (lookup-in-table name (cdr table) table-f)))))))
 
 
-(define e
-  ((lambda (nothing)
-     (cond
-       (nothing (quote something))
-       (else (quote nothing))))
-   #t))
 
 ; What is the type of e where e is 6? -> *const.
 
@@ -96,17 +68,10 @@
 
 ; What is the type of e where e is (quote nothing)? -> *quote
 
-(define d
-  (lambda (x y) (cons x y)))
 
 ; What is the type of d? -> *lambda
 
-(define an-app
-  ((lambda (nothing)
-     (cond
-       (nothing (quote something))
-       (else (quote nothing))))
-   #t))
+
 
 ; What is the type of an-app? -> *application
 
@@ -139,6 +104,8 @@
       ((atom? e) (atom-to-action e))
       (else (list-to-action e)))))
 
+(define text-of second)
+
 (define atom-to-action
   (lambda (e)
     (cond
@@ -165,6 +132,7 @@
          ((eq? (car e) (quote quote)) *quote)
          ((eq? (car e) (quote lambda)) *lambda)
          ((eq? (car e) (quote cond)) *cond)
+         ((eq? (car e) (quote let)) *let)
          (else *application)))
       (else *application))))
 
@@ -175,6 +143,10 @@
 (define meaning
   (lambda (e table)
     ((expression-to-action e) e table)))
+
+(define *let
+  (lambda (e table)
+    (meaning (lambda-from-let e) table)))
 
 (define *const
   (lambda (e table)
@@ -194,7 +166,7 @@
 
 (define initial-table
   (lambda (name)
-    (car (quote ()))))
+    (quote ())))
 
 (define *lambda
   (lambda (e table)
@@ -205,11 +177,6 @@
 (define build
   (lambda (primitive e)
     (cons primitive (cons e '()))))
-
-(define test-table '(((y z)((8) 9))))
-(define test-e '(lambda (x) (cons x y)))
-
-(define test-meaning (meaning test-e test-table))
 
 (define table-of first)
 
@@ -234,8 +201,6 @@
       ((atom? x) (eq? x (quote else)))
       (else #f))))
 
-(define myline '((= n 0) 0))
-
 (define question-of
   (lambda (line)
     (car line)))
@@ -250,10 +215,6 @@
 
 (define cond-lines-of cdr)
 
-(define mycond '(cond (coffee klatsch) (else party)))
-(define cond-tab '(((coffee) (#t))
-                   ((klatsch party) (5 (6)))))
-
 (define evlis
   (lambda (args table)
     (cond
@@ -261,6 +222,8 @@
       (else
        (cons (meaning (car args) table)
              (evlis (cdr args) table))))))
+
+
 
 (define *application
   (lambda (e table)
@@ -274,7 +237,6 @@
 
 ; How many different kinds of functions are there? ->
 ; Two: primitives and non-primitives.
-
 
 
 (define primitive?
@@ -327,6 +289,66 @@
       ((eq? name (quote number?))
        (number? (first vals))))))
 
+(define arity-mismatch
+  (lambda ()
+    (display "Arity mismatch has been detected")
+    (car '())))
+
+; I want to check to see if a variable has been defined
+; before the application attempts to execute. If it has
+; not been found, the arity-mismatch procedure should
+; execute.
+
+; The initial idea was to first check to see if vals
+; and the formals-of closure are the same length.
+
+; Is this a robust enough definition at this level?
+
+; I don't think so, what happens if a formal for a particular
+; nested lambda expression was defined at a higher lexical scope?
+
+; I will explore the behavior of R5RS in this event.
+
+; If there is an arity mismatch at any level of the program,
+; the problem will become evident after the rib-cage table
+; is constructed. Lets use the example of a simple closure:
+
+; ((lambda (a b) (cons a b) 1)
+
+; In the above example, we expect two values for the application of
+; this lambda statement(one for a and b). Only a single value is provided.
+
+; When a rib is built based on these parameters, the arity mismatch will
+; manifest. Either the value or the name of the variables will be longer.
+
+; We can therefore check for arity mismatches by checking the length of
+; the names and variables during the lookup-in-entry-helper procedure.
+; If the lengths of these two lists are not equal, we shall call the
+; procedure arity-mismatch and terminate execution of the program.
+
+; This works even in the context of inheritence or lexical scoping.
+; When the external lambda expression generates it's table, lets
+; say in the example:
+
+; '((lambda (f a) (f a)) (lambda (a) (atom? a)) 5))
+
+; The application of the internal lambda function does not begin
+; until after the table is established from the external lambda
+; function (lambda (f a) (f a)).
+
+; When this internal/nested lambda function is finally executed
+; (lambda (a) (atom? a)). It does not go through the *application
+; route of the TLS interpreter, but rather only the *lambda route.
+; Therefore, it will be turned into -> '((non-primitive lambda) (() (a) (atom? a)).
+; When meaning is applied to this expression, it will use the already existing
+; rib table and look for a in this table. Because it was already established
+; in the outer nested lambda, it will be found no problem.
+
+; To fix the issue with unbound-variables requires a search for a particular
+; variable. If it does not exist in the current scope, it is unbounded. 
+
+
+         
 (define apply-closure
   (lambda (closure vals)
     (meaning (body-of closure)
@@ -336,14 +358,6 @@
                vals)
               (table-of closure)))))
 
-(define test-closure '(((( u v w )
-( 1 2 3))
-( (x y z)
-(4 5 6) ) )
-(x y)
-( cons z x ) ))
-
-(define test-vals '((a b c) (d e f)))
 
 ; (primitive cons) (6 (a b c)) paramters of myapply in above example.
 
@@ -355,7 +369,63 @@
 
 ;(value '((lambda (x) (add1 x)) 3))
 
-(define expre '((lambda (x) (add1 x)) 3))
+;(value '((lambda (x y) (cons x (cons y '()))) 4 5))
+
+
+(define let-struct '(let ((x 1)(y 5)) (let ((x 5)) (add1 x))))
+
+(define lambda-struct '((lambda (x y) (cons x y)) 1 5))
+
+
+(define lambda-from-let
+  (lambda (lets)
+    (cons (list 'lambda (let-vars lets) (let-body lets)) (let-vals lets))))
+
+(define let-params
+  (lambda (let-statement)
+    (cadr let-statement)))
+
+(define let-vars
+  (lambda (let-statement)
+    (map car (let-params let-statement))))
+
+(define let-vals
+  (lambda (let-statement)
+    (map cadr (let-params let-statement))))
+
+(define let-body
+  (lambda (let-statement)
+    (third let-statement)))
+
+;; (value '((lambda (x) (add1 x)) 3)) 
+
+;; e -> '((lambda (x) (add1 x)) 3))
+;; table -> '()
+
+;; 
+
+
+;; (meaning (expression-to-action e) e table)
+
+;; (*application e table)
+
+;; (myapply (meaning (function-of e) table) (evlis (args-of e))
+
+;; (myapply-closure
+
+;; ((lambda (x y) (cons x y)) 1 2) <- (let ((x 1)(y 2)) (cons x y))
+
+;; (cons (list 'lambda (args of lambda) (body of lambda)) (vals of lambda))
+
+
+
+
+
+
+
+
+    
+    
 
 
 
